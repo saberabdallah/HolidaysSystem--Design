@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أنواع الإجازات - نظام إدارة الإجازات</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- زر القائمة للجوال -->
+        <div class="col-12 d-md-none bg-dark text-white p-3 d-flex justify-content-between align-items-center">
+            <span class="fw-bold"><i class="fa-solid fa-umbrella-beach me-2"></i> نظام الإجازات</span>
+            <button class="btn btn-outline-light btn-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar"><i class="fa-solid fa-bars"></i> القائمة</button>
+        </div>
+
+        <!-- القائمة الجانبية للجوال -->
+        <div class="offcanvas offcanvas-start bg-dark text-white p-3 d-md-none" tabindex="-1" id="mobileSidebar">
+            <div class="offcanvas-header border-bottom border-secondary pb-3">
+                <h5 class="offcanvas-title"><i class="fa-solid fa-umbrella-beach me-2"></i> نظام الإجازات</h5>
+                <button type="button" class="btn-close btn-close-white ms-0 me-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="nav nav-pills flex-column mb-auto p-0">
+                    <li class="nav-item mb-1"><a href="index.html" class="nav-link"><i class="fa-solid fa-chart-pie ms-2"></i> لوحة التحكم</a></li>
+                    <li class="nav-item mb-1"><a href="employees.html" class="nav-link"><i class="fa-solid fa-users ms-2"></i> الموظفون والطلبات</a></li>
+                    <li class="nav-item mb-1"><a href="reports.html" class="nav-link"><i class="fa-solid fa-file-lines ms-2"></i> التقارير والسجل</a></li>
+                    <li class="nav-item mb-1"><a href="leave-types.html" class="nav-link active"><i class="fa-solid fa-list-check ms-2"></i> أنواع الإجازات</a></li>
+                    <li class="nav-item mb-1"><a href="users.html" class="nav-link"><i class="fa-solid fa-user-shield ms-2"></i> إدارة المستخدمين</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- القائمة الجانبية للديسكتوب -->
+        <nav id="sidebar" class="col-md-3 col-lg-2 d-none d-md-block sidebar p-3 text-white">
+            <div class="d-flex align-items-center justify-content-center py-3 mb-4 border-bottom border-secondary">
+                <span class="sidebar-brand"><i class="fa-solid fa-umbrella-beach me-2"></i> نظام الإجازات</span>
+            </div>
+            <ul class="nav nav-pills flex-column mb-auto p-0">
+                <li class="nav-item"><a href="index.html" class="nav-link"><i class="fa-solid fa-chart-pie ms-2"></i> لوحة التحكم</a></li>
+                <li class="nav-item"><a href="employees.html" class="nav-link"><i class="fa-solid fa-users ms-2"></i> الموظفون والطلبات</a></li>
+                <li class="nav-item"><a href="reports.html" class="nav-link"><i class="fa-solid fa-file-lines ms-2"></i> التقارير والسجل</a></li>
+                <li class="nav-item"><a href="leave-types.html" class="nav-link active"><i class="fa-solid fa-list-check ms-2"></i> أنواع الإجازات</a></li>
+                <li class="nav-item"><a href="users.html" class="nav-link"><i class="fa-solid fa-user-shield ms-2"></i> إدارة المستخدمين</a></li>
+            </ul>
+        </nav>
+
+        <!-- المحتوى الرئيسي -->
+        <main class="col-12 col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h4 class="fw-bold mb-1">إدارة أنواع الإجازات</h4>
+                    <p class="text-muted small mb-0">إضافة وتعديل التصنيفات المتاحة للإجازات</p>
+                </div>
+                <button class="btn btn-primary shadow-sm" data-bs-toggle="modal" data-bs-target="#leaveTypeModal">
+                    <i class="fa-solid fa-plus me-1"></i> إضافة نوع إجازة جديد
+                </button>
+            </div>
+
+            <div class="card p-3">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>نوع الإجازة</th>
+                                <th>الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="fw-semibold">1</td>
+                                <td>إجازة سنوية</td>
+                                <td>
+                                    <button class="btn btn-sm btn-light text-primary border me-1"><i class="fa-solid fa-pen"></i></button>
+                                    <button class="btn btn-sm btn-light text-danger border"><i class="fa-solid fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+<!-- Modal: إضافة نوع إجازة جديد -->
+<div class="modal fade" id="leaveTypeModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header"><h5 class="modal-title fw-bold">إضافة نوع إجازة جديد</h5>
+                <button type="button" class="btn-close ms-0 me-auto" data-bs-dismiss="modal"></button></div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3"><label class="form-label fw-semibold">نوع الإجازة</label><input type="text" class="form-control" placeholder="مثال: إجازة طارئة"></div>
+                </form>
+            </div>
+            <div class="modal-footer"><button class="btn btn-light border" data-bs-dismiss="modal">إلغاء</button><button class="btn btn-primary">حفظ النوع</button></div>
+        </div>
+    </div>
+</div>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/all.min.js"></script>
+</body>
+</html>
